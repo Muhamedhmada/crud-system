@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="this is crud project" >
+        <link rel="stylesheet" href="style.css">
+        <title>Crud</title>
+    </head>
+    <body>
+        <div class="crud">
+            <header>
+                <h1>Crud System</h1>
+                <p>CREAT READ UPDATE DELETE SEARCH</p>
+            </header>
+            <div class="input">
+                <input type="text" onkeyup="disabledbtn()" placeholder="title" id="title">
+                <div class="prices">
+                    <input type="number" onkeyup="getTotal() ,disabledbtn()" placeholder="price" id="price">
+                    <input type="number" onkeyup="getTotal() ,disabledbtn()" placeholder="taxes" id="taxes">
+                    <input type="number" onkeyup="getTotal() ,disabledbtn()" placeholder="ads" id="ads">
+                    <input type="number" onkeyup="getTotal() ,disabledbtn()" placeholder="discount" id="discount">
+                    <small id="total"></small>
+                </div>
+                <input type="number" onkeyup="disabledbtn()"  placeholder="count" id="count">
+                <input type="text" onkeyup="disabledbtn()"  placeholder="category" id="category">
+                <input type="button" value="create" id="create">
+                <input type="search" onkeyup="dataSearch()" placeholder="search" id="search">
+                <div class="searchtype">
+                    <input type="button" onclick="typeSearchtitle()" value="Search By Title" id="searchtitle" >
+                    <input type="button"  onclick="typeSearchcat()" value="Search By Category" id="searchcategory">
+                </div>
+                <input type="button" onclick="deleteAll()"  id="deleteAll">
+            </div>
+            <div class="table" >
+                <table >
+                    <tr>
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>category</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                    <tbody id="tbody">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="deletePermision" id="permission">
+                <p>are u sure to delete this item</p>
+                <div class="yesorno">
+                    <input onclick="yesfunc()" type="button" id="yes" value="yes">
+                    <input onclick="nofunc()" type="button" id="no" value="no">
+                </div>
+            </div>
+            <div style="text-align:center;">this site made by hmada 30/3/2023&copy;</div>
+        </div>
+    <script src="main.js"></script>
+    </body>
+</html>
